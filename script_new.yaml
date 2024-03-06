@@ -1,0 +1,16 @@
+---
+
+  - hosts: apache
+    sudo: yes
+    name: Play1
+    tasks:
+       - name: Install Apache
+         apt: name=Apache2 state=latest 
+
+
+  - hosts: nginx
+    sudo: yes
+    name: Play2
+    tasks:
+       - name: Install Nginx
+         apt: name=nginx state=latest 
