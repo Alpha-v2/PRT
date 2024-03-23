@@ -1,15 +1,17 @@
 ---
 
   - hosts: apache
-    sudo: yes
+    become: yes
+    become_user: root
     name: Play1
     tasks:
-       - name: Install an Apache
-         apt: name=Apache2 state=latest 
+       - name: Install Apache
+         apt: name=apache2 state=latest 
 
 
   - hosts: nginx
-    sudo: yes
+    become: yes
+    become_user: root
     name: Play2
     tasks:
        - name: Install Nginx
