@@ -4,7 +4,7 @@
     sudo: yes
     name: Play1
     tasks:
-       - name: Install Apache
+       - name: Install an Apache
          apt: name=Apache2 state=latest 
 
 
